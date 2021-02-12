@@ -1,7 +1,6 @@
 from os import name
 from django.contrib.admin import autodiscover
 from django.shortcuts import render
-from .models import aticlename
 
 # Create your views here.
 def hello(request):

@@ -9,17 +9,14 @@
         <th scope="col">insideDB</th>
       </tr>
     </thead>
-    {%for name in nameFDBindex%}
     <tbody>
       <tr>
         <th scope="row">1</th>
         <td>{{nameindex2}}</td>
-        <td>{{name.nameDB}}</td>
-        <td>{{name.insideDB}}</td>
+        <td>{{insideindex}}</td>
+        <td></td>
       </tr>
-      {% endfor%}
     </tbody>
   </table>
     {{nameindex2}} <br>
     {{insideindex}}
-{% endblock %}
