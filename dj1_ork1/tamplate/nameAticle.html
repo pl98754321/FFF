@@ -1,0 +1,25 @@
+{%extends 'layout.html'%}
+{% block container%}
+<table class="table">
+    <thead >
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">nameindex2</th>
+        <th scope="col">nameDB</th>
+        <th scope="col">insideDB</th>
+      </tr>
+    </thead>
+    {%for name in nameFDBindex%}
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{nameindex2}}</td>
+        <td>{{name.nameDB}}</td>
+        <td>{{name.insideDB}}</td>
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+    {{nameindex2}} <br>
+    {{insideindex}}
+{% endblock %}
