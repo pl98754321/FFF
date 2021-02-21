@@ -1,0 +1,44 @@
+{%extends 'layout.html'%}
+
+{% block container%}
+<h1 align='center'>ใส่ข้อมูล</h1>
+
+<form action="" method="POST">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+                <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect04" name="number">
+                                <option selected value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Forth</option>
+                                <option value="5">Fifth</option>
+                        </select>
+                        <div class="input-group-append">
+                                <input type="submit" value="ตกลง" aria-label="Large"
+                                        aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                </div>
+</form>
+
+<form action="a" method="POST">
+        {% csrf_token %}
+        {% for i in n %}
+        {%if i == 0%}
+        {%else%}
+        <br>
+        <div class="input-group">
+                <span class="input-group-text">ชื่อ {{i}}</span>
+                <input type="text" class="form-control" name="inname">
+                <span class="input-group-text">ช้อมูล </span>
+                <input type="text" class="form-control" name="inname">
+        </div>
+        {%endif%}
+        {%endfor%}
+
+        {%if n == 0%}
+        {%else%}
+        <br>
+        <input type="submit" value="ตกลง">
+        {%endif%}
+</form>
+{% endblock %}
